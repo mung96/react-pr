@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "strict": true,
+    "allowJs": true,
+
+    "jsx": "react-jsx",
+    "esModuleInterop": true
+  },
+  "include": ["src"]
+}
