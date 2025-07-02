@@ -1,6 +1,6 @@
 import "./App.css";
-import Tut2 from "./ReactHookForm/Tut2";
+import ModalExample from "./components/ModalExample";
 
 export default function App() {
-  return <Tut2 />;
+  return <ModalExample />;
 }
