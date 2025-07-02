@@ -19,7 +19,6 @@ export default function UserForm() {
   const onSubmit = (data: User) => {
     console.log("✅ 제출 데이터:", data);
   };
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -27,12 +26,6 @@ export default function UserForm() {
         <input {...register("name")} />
         <p>{errors.name?.message}</p>
       </div>
-
-      {/* <div>
-        <label>나이:</label>
-        <input type="number" {...register("age")} />
-        <p>{errors.age?.message}</p>
-      </div> */}
 
       <div>
         <label>학교 유형:</label>
@@ -43,6 +36,18 @@ export default function UserForm() {
           <option value="ElementarySchool">초등학교</option>
         </select>
         <p>{errors.schoolType?.message}</p>
+      </div>
+
+      <div>
+        <label>수학 점수:</label>
+        <input {...register("levelInfo.math")} />
+        <p>{errors.levelInfo?.math?.message}</p>
+      </div>
+
+      <div>
+        <label>영어 점수:</label>
+        <input {...register("levelInfo.english")} />
+        <p>{errors.levelInfo?.english?.message}</p>
       </div>
 
       <button type="submit">제출</button>
